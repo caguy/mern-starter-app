@@ -1,0 +1,43 @@
+{
+  "name": "mern-starter-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "NODE_ENV=development concurrently \"nodemon\" \"npm --prefix client run dev\"",
+    "start": "NODE_ENV=production node server.js",
+    "build": "NODE_ENV=production npm --prefix client run build",
+    "post-build": "npm --prefix client install && npm run build",
+    "serve": "npm run build && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "console-stamp": "^0.2.9",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.10.10",
+    "morgan": "^1.10.0",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  },
+  "_moduleAliases": {
+    "@config": "./config",
+    "@loaders": "./loaders",
+    "@middlewares": "./middlewares",
+    "@models": "./models",
+    "@root": ".",
+    "@api": "./api"
+  },
+  "keywords": []
+}
