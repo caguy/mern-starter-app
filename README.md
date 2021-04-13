@@ -28,7 +28,8 @@ Uses Mongoose, JWT authentification, custom Webpack configuration, Jest.
 ## How to use
 Install server and client dependencies :
 ```
-npm run install
+npm i
+npm --prefix client i
 ```
 
 Run dev server (server and client served separately for hot reloading reasons) :
